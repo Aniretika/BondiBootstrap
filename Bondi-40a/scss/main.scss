@@ -1,0 +1,102 @@
+@import "_custom";
+@import "_include-media";
+body {
+    background: #eff7fa;
+    width: 100%;
+}
+
+@mixin font-size ($target, $context: $base-size) {
+    font-size: ($target/$context) * 1rem;
+}
+
+.main-header {
+    padding-top: 178px;
+    margin-bottom: 64px;
+    h1 {
+        padding-bottom: 6px;
+        text-align: center;
+        font: 500 $font-family-base;
+        @include font-size(35px);
+        color: $header-color;
+        .header-span {
+            margin-top: 10px;
+            font: 400 15px $font-family-base;
+            display: block;
+            color: $header-span-color;
+            text-transform: uppercase;
+        }
+    }
+    .border-header {
+        display: block;
+        margin: auto;
+        border-top: 2px solid #7fe0de;
+        width: 144px;
+    }
+}
+
+.main-header:before {
+    content: '';
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2276.562%22%20height%3D%2257.188%22%20viewBox%3D%220%200%2076.562%2057.188%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23ffc400%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22Composite_Path%22%20data-name%3D%22Composite%20Path%22%20class%3D%22cls-1%22%20d%3D%22M995.681%2C102.716a6.743%2C6.743%2C0%2C0%2C0-12.384.205l-23.214-8.77a8.723%2C8.723%2C0%2C0%2C0-7.535-10.646l0.171-8.89a6.744%2C6.744%2C0%2C1%2C0-2-.038L950.55%2C83.5a8.752%2C8.752%2C0%2C0%2C0-6.96%2C12.293%2C8.66%2C8.66%2C0%2C0%2C0%2C.443.847L931.17%2C106.79a6.742%2C6.742%2C0%2C1%2C0%2C1.443%2C2.052c-0.071-.156-0.154-0.3-0.234-0.456l12.867-10.153a8.742%2C8.742%2C0%2C0%2C0%2C14.176-2.193l23.39%2C8.835A6.748%2C6.748%2C0%2C1%2C0%2C995.681%2C102.716Zm-41.337-4.375a6.749%2C6.749%2C0%2C1%2C1%2C3.373-8.928A6.755%2C6.755%2C0%2C0%2C1%2C954.344%2C98.341Z%22%20transform%3D%22translate%28-919.719%20-61.188%29%22/%3E%0A%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+    margin: auto;
+    top: 80px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 79px;
+    height: 57px;
+    display: block;
+}
+
+.main-nav {
+    margin-bottom: 58px;
+    .nav-link {
+        border-radius: $navigation-border-radius;
+        color: $header-span-color;
+        padding: 7px 20px 15px 22px;
+        font: 15px $font-family-base;
+        margin-right: 4px;
+    }
+    .nav-link.active,
+    .show>.nav-link {
+        padding: 7px 20px 15px 22px;
+        color: $nav-link-color;
+        background-color: $nav-link-background;
+    }
+}
+
+.lemurs-wrapper {
+    margin-top: 30px;
+    div {
+        height: 200px;
+        padding-bottom: 28px;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+.nav-link:hover {
+    padding: 7px 20px 15px 22px;
+    color: $nav-link-color;
+    background: $nav-link-background;
+}
+
+.button-row {
+    width: 100%;
+    text-align: center;
+    .btn-danger {
+        font: 500 15px $font-family-base;
+        color: $nav-link-color;
+        text-transform: uppercase;
+        @include media('<900px') {
+            display: none;
+        }
+    }
+}
+
+.btn-danger:hover {
+    color: $nav-link-color;
+}
