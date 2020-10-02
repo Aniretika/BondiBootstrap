@@ -1,0 +1,23 @@
+{
+  "name": "bondismall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aniretika/BondiBootstrap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aniretika/BondiBootstrap/issues"
+  },
+  "homepage": "https://github.com/Aniretika/BondiBootstrap#readme"
+}

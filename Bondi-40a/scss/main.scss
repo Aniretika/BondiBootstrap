@@ -1,3 +1,7 @@
+/*
+test-repaired
+*/
+
 @import "_custom";
 @import "_include-media";
 body {
@@ -49,39 +53,38 @@ body {
 }
 
 .main-nav {
-    margin-bottom: 58px;
+    margin-bottom: 52px;
     .nav-link {
         border-radius: $navigation-border-radius;
         color: $header-span-color;
-        padding: 7px 20px 15px 22px;
+        padding: 7px 16px 18px;
+        border: 2px solid transparent;
         font: 15px $font-family-base;
-        margin-right: 4px;
+        margin: 0 4px;
     }
+    .nav-link:hover,
     .nav-link.active,
     .show>.nav-link {
-        padding: 7px 20px 15px 22px;
+        border: none;
+        padding: 7px 18px 18px;
         color: $nav-link-color;
         background-color: $nav-link-background;
     }
 }
 
 .lemurs-wrapper {
-    margin-top: 30px;
-    div {
+    margin-bottom: 89px;
+    width: 100%;
+    img {
+        width: 250px;
         height: 200px;
-        padding-bottom: 28px;
-        img {
+        display: block;
+        @include media(≥500px) {
+            padding-bottom: 28px;
             width: 100%;
-            height: 100%;
-            display: block;
+            margin: auto;
         }
     }
-}
-
-.nav-link:hover {
-    padding: 7px 20px 15px 22px;
-    color: $nav-link-color;
-    background: $nav-link-background;
 }
 
 .button-row {
@@ -91,9 +94,6 @@ body {
         font: 500 15px $font-family-base;
         color: $nav-link-color;
         text-transform: uppercase;
-        @include media('<900px') {
-            display: none;
-        }
     }
 }
 
