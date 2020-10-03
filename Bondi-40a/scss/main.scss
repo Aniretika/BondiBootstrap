@@ -57,12 +57,15 @@ body {
     .nav-link {
         border-radius: $navigation-border-radius;
         color: $header-span-color;
-        padding: 7px 16px 18px;
-        border: 2px solid transparent;
+        padding: 7px 18px 18px;
         font: 15px $font-family-base;
         margin: 0 4px;
     }
-    .nav-link:hover,
+    .nav-link:hover {
+        border: none;
+        padding: 7px 18px 18px;
+        color: $nav-link-color;
+    }
     .nav-link.active,
     .show>.nav-link {
         border: none;
@@ -75,13 +78,12 @@ body {
 .lemurs-wrapper {
     margin-bottom: 89px;
     width: 100%;
-    img {
-        width: 250px;
-        height: 200px;
-        display: block;
-        @include media(≥500px) {
+    .row-lemurs {
+        margin: 0;
+        img {
+            display: block;
             padding-bottom: 28px;
-            width: 100%;
+            width: 70%;
             margin: auto;
         }
     }
